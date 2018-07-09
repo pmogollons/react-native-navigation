@@ -137,6 +137,7 @@ var Controllers = {
       _validateDrawerProps(layout);
       console.log('set root');
       _processProperties(_.get(layout, 'props.appStyle', {}));
+      layout.direction = passProps.direction;
       return await RCCManager.setRootController(layout, animationType, passProps);
     },
     getLaunchArgs: async function() {
