@@ -28,6 +28,7 @@ public class StyleParamsParser {
 
         StyleParams result = new StyleParams(params);
         result.orientation = Orientation.fromString(params.getString("orientation", getDefaultOrientation()));
+        result.direction = params.getString("direction", getDefaultDirection());
         result.screenAnimationType = params.getString("screenAnimationType", getDefaultScreenAnimationType());
         result.statusBarColor = getColor("statusBarColor", getDefaultStatusBarColor());
         result.statusBarHidden = getBoolean("statusBarHidden", getDefaultStatusHidden());
@@ -121,6 +122,10 @@ public class StyleParamsParser {
 
     private String getDefaultOrientation() {
         return AppStyle.appStyle == null ? null : AppStyle.appStyle.orientation.name;
+    }
+
+    private String getDefaultDirection() {
+        return (AppStyle.appStyle == null || AppStyle.appStyle.direction == null) ? "ltr" : AppStyle.appStyle.direction;
     }
 
     private StyleParams createDefaultStyleParams() {

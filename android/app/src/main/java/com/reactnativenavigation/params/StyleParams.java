@@ -85,6 +85,7 @@ public class StyleParams {
     }
 
     public Orientation orientation;
+    public String direction;
     public String screenAnimationType;
     public StatusBarTextColorScheme statusBarTextColorScheme;
     public Color statusBarColor;

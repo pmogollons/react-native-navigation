@@ -97,7 +97,7 @@ public class NavigationActivity extends AppCompatActivity implements DefaultHard
     }
 
     private void createLayout() {
-        layout = LayoutFactory.create(this, activityParams);
+        layout = LayoutFactory.create(this, activityParams, NavigationApplication.instance.getReactGateway().getReactInstanceManager().getCurrentReactContext());
         if (hasBackgroundColor()) {
             layout.asView().setBackgroundColor(AppStyle.appStyle.screenBackgroundColor.getColor());
         }

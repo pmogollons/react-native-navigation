@@ -159,6 +159,7 @@ function convertStyleParams(originalStyleObject) {
 
   let ret = {
     orientation: originalStyleObject.orientation,
+    direction: originalStyleObject.direction,
     screenAnimationType: originalStyleObject.screenAnimationType,
     statusBarColor: processColor(originalStyleObject.statusBarColor),
     statusBarHidden: originalStyleObject.statusBarHidden,
